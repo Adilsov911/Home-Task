@@ -20,12 +20,10 @@ namespace Allup.Controllers
         {
             return View();
         }
-
-        public async Task<IActionResult> ProductModal(int? id)
+        public  async Task<IActionResult> GetProductModal(int? id)
         {
-            Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
-
-            return PartialView("_ProductModalPartial",product);
+           Product product = await _context.Products.Include(p=>p.ProductImages).FirstOrDefaultAsync(p =>p.IsDeleted==false && p.Id == id);
+            return PartialView("_ModalPartialView",product);
         }
     }
 }

@@ -8481,11 +8481,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AllUpMentor-main\\AllUpMentor-main\\Allup\\Allup.csproj",
+      "projectUniqueName": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AlluP_ASP.NetCoreWithMVC-master\\AlluP_ASP.NetCoreWithMVC-master\\Allup\\Allup.csproj",
       "projectName": "Allup",
-      "projectPath": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AllUpMentor-main\\AllUpMentor-main\\Allup\\Allup.csproj",
+      "projectPath": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AlluP_ASP.NetCoreWithMVC-master\\AlluP_ASP.NetCoreWithMVC-master\\Allup\\Allup.csproj",
       "packagesPath": "C:\\Users\\adils\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AllUpMentor-main\\AllUpMentor-main\\Allup\\obj\\",
+      "outputPath": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AlluP_ASP.NetCoreWithMVC-master\\AlluP_ASP.NetCoreWithMVC-master\\Allup\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\adils\\AppData\\Roaming\\NuGet\\NuGet.Config",
