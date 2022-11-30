@@ -47,8 +47,22 @@ using Allup.ViewModels.ShopVM;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 7 "C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\Views\_ViewImports.cshtml"
+using Allup.ViewModels.Basket;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\Views\_ViewImports.cshtml"
+using Allup.ComponentViewModel.Header;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a08a7f4591ee0a830577d75cd538760acd4f4d8d", @"/Views/Shared/_ModalPartialView.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b8f1c9b73ea270805071a8c7206852fadcfd65da", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d22bb20fbcd50e8c17a6d64dfa285c9a75341f3c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__ModalPartialView : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Product>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("alt", new global::Microsoft.AspNetCore.Html.HtmlString("product"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -92,7 +106,7 @@ using Allup.ViewModels.ShopVM;
 #line hidden
 #nullable disable
             WriteLiteral("                    <div class=\"single-view-image\">\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a08a7f4591ee0a830577d75cd538760acd4f4d8d6622", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a08a7f4591ee0a830577d75cd538760acd4f4d8d7120", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -134,7 +148,7 @@ AddHtmlAttributeValue("", 385, item.Name, 385, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("                    <li>\n                        <div class=\"single-thumb\">\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a08a7f4591ee0a830577d75cd538760acd4f4d8d9132", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a08a7f4591ee0a830577d75cd538760acd4f4d8d9630", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -225,7 +239,7 @@ AddHtmlAttributeValue("", 795, productImage.Name, 795, 18, false);
 #line hidden
 #nullable disable
             WriteLiteral("</p>\n                <div class=\"product-size-color flex-wrap\">\n                    <div class=\"product-size\">\n                        <h5 class=\"title\">Size</h5>\n                        <select>\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a08a7f4591ee0a830577d75cd538760acd4f4d8d14055", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a08a7f4591ee0a830577d75cd538760acd4f4d8d14553", async() => {
                 WriteLiteral("S");
             }
             );
@@ -241,7 +255,7 @@ AddHtmlAttributeValue("", 795, productImage.Name, 795, 18, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a08a7f4591ee0a830577d75cd538760acd4f4d8d15236", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a08a7f4591ee0a830577d75cd538760acd4f4d8d15734", async() => {
                 WriteLiteral("M");
             }
             );
@@ -257,7 +271,7 @@ AddHtmlAttributeValue("", 795, productImage.Name, 795, 18, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a08a7f4591ee0a830577d75cd538760acd4f4d8d16417", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a08a7f4591ee0a830577d75cd538760acd4f4d8d16915", async() => {
                 WriteLiteral("L");
             }
             );
@@ -273,7 +287,7 @@ AddHtmlAttributeValue("", 795, productImage.Name, 795, 18, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a08a7f4591ee0a830577d75cd538760acd4f4d8d17598", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a08a7f4591ee0a830577d75cd538760acd4f4d8d18096", async() => {
                 WriteLiteral("XL");
             }
             );

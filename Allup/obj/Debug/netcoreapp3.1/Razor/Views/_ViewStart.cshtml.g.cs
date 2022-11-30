@@ -47,8 +47,22 @@ using Allup.ViewModels.ShopVM;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 7 "C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\Views\_ViewImports.cshtml"
+using Allup.ViewModels.Basket;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\Views\_ViewImports.cshtml"
+using Allup.ComponentViewModel.Header;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"13d997f3c0487a4271425847f520061dffe2e64d", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b8f1c9b73ea270805071a8c7206852fadcfd65da", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d22bb20fbcd50e8c17a6d64dfa285c9a75341f3c", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

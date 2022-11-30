@@ -295,6 +295,7 @@ C:\Users\irade\source\repos\AlluP_ASP.NetCoreWithMVC\Allup\obj\Debug\netcoreapp3
 C:\Users\irade\source\repos\AlluP_ASP.NetCoreWithMVC\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ModalPartialView.cshtml.g.cs
 C:\Users\irade\source\repos\AlluP_ASP.NetCoreWithMVC\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ProductsOnHomePartialView.cshtml.g.cs
 C:\Users\irade\source\repos\AlluP_ASP.NetCoreWithMVC\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SearchPartialView.cshtml.g.cs
+C:\Users\irade\source\repos\AlluP_ASP.NetCoreWithMVC\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BasketCartPartial.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\bin\Debug\netcoreapp3.1\Allup.exe
@@ -426,12 +427,11 @@ C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Allup.RazorAssemblyInfo.cache
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Allup.RazorAssemblyInfo.cs
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\staticwebassets\Allup.StaticWebAssets.Manifest.cache
-C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\staticwebassets\Allup.StaticWebAssets.xml
-C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\scopedcss\bundle\Allup.styles.css
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Allup.TagHelpers.input.cache
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Allup.TagHelpers.output.cache
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Allup.RazorCoreGenerate.cache
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BasketCartPartial.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ModalPartialView.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ProductsOnHomePartialView.cshtml.g.cs
@@ -445,3 +445,6 @@ C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Allup.dll
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Allup.pdb
 C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Allup.genruntimeconfig.cache
+C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\staticwebassets\Allup.StaticWebAssets.xml
+C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\scopedcss\bundle\Allup.styles.css
+C:\Users\adils\OneDrive\Рабочий стол\AlluP_ASP.NetCoreWithMVC-master\AlluP_ASP.NetCoreWithMVC-master\Allup\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Header\Default.cshtml.g.cs

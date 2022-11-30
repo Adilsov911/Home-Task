@@ -33,6 +33,10 @@ namespace Allup
                       options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
                   });
             services.AddScoped<ILayoutService, LayoutService>();
+            services.AddSession(option=> {
+                option.IdleTimeout = TimeSpan.FromSeconds(10);
+            });
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +49,7 @@ namespace Allup
 
             app.UseRouting();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
