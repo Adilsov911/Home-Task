@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/mP/ahNU3RseF7NEznkx5wQE/9HQ+dvGgECA83X0RnETr2pHquQCOQlQFX9xQx9+9gOmwhfZaF2ikXWgKa9/Lg==",
+  "dgSpecHash": "Cxcin2xNxYjow9MraOYwepoFjWofWZuIfMFQSDVhFhgT9fGNF6Y4/QOZN9ob2UgzCwjzCIUqDD1lp5hg6KWRJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AlluP_ASP.NetCoreWithMVC-master\\AlluP_ASP.NetCoreWithMVC-master\\Allup\\Allup.csproj",
+  "projectFilePath": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AllupAdil\\Allup\\Allup.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adils\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\adils\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

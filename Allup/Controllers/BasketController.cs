@@ -123,12 +123,6 @@ namespace Allup.Controllers
             return PartialView("_BasketCartPartial", products);
 
         }
-        public async Task<IActionResult> GetBasketContent()
-        {
-          string pro =  HttpContext.Request.Cookies["basket"];
-            List<BasketVM> products = JsonConvert.DeserializeObject<List<BasketVM>>(pro);
-            return Json(products);
-          
-        }
+    
     }
 }
