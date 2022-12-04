@@ -1,10 +1,8 @@
 ﻿using Allup.DAL;
-using Allup.Models;
+using Allup.Model;
 using Allup.ViewModels.Home;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,58 +17,25 @@ namespace Allup.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult>Index()
         {
+            //List<Setting> settings = _context.Settings.ToList();
+            //ViewBag.Settings = settings;
+
+            //List<Slider> sliders =await _context.Sliders.Where(s => s.IsDeleted == false).ToListAsync();
+            //List<Category> categories = await _context.Categories.Where(c => c.IsDeleted == false && c.IsMain == true).ToListAsync();
+            
+
             HomeVM homeVM = new HomeVM
             {
-               Sliders= await _context.Sliders.Where(s => s.IsDeleted == false).ToListAsync(),
-                Categories = await _context.Categories.Where(c => c.IsDeleted == false && c.IsMain == true ).ToListAsync(),
-                NewArrivals = await _context.Products.Where(c=>c.IsDeleted==false && c.IsNewArrival).ToListAsync(),
-                BestSellers = await _context.Products.Where(c => c.IsDeleted == false && c.IsBestSeller).ToListAsync(),
-                Featured = await _context.Products.Where(c => c.IsDeleted == false && c.IsFeatured).ToListAsync()
-
-
-
+                Sliders = await _context.Sliders.Where(s => s.IsDeleted == false).ToListAsync(),
+                Categories = await _context.Categories.Where(c => c.IsDeleted == false && c.IsMain == true).ToListAsync(),
+                 NewArrival = await _context.Products.Where(p => p.IsDeleted == false && p.IsNewArrival == true).ToListAsync(),
+                 BestSeller = await _context.Products.Where(p => p.IsDeleted == false && p.IsBestSeller == true).ToListAsync(),
+                 Featured = await _context.Products.Where(p => p.IsDeleted == false && p.IsFeatured == true).ToListAsync()
             };
+
             return View(homeVM);
-
         }
-
-
-        //public async Task<IActionResult> SetObjectToCookie()
-        //{
-        //    Product product = await _context.Products.FirstOrDefaultAsync();
-        //    string pro = JsonConvert.SerializeObject(product);
-
-        //    HttpContext.Response.Cookies.Append("basket",pro);
-        //    return Ok();
-        //}
-        //public async Task<IActionResult> GetObjectFromCookie()
-        //{
-        //  string pro=  HttpContext.Request.Cookies["basket"];
-        //    return Json(pro);
-        //}
-
-        //public async Task<IActionResult> SetCookie()
-        //{
-        //    HttpContext.Response.Cookies.Append("cookie", "my first session");
-        //    return RedirectToAction(nameof(Index));
-        //}
-        //public async Task<IActionResult> GetCookie()
-        //{
-        //    return Content(HttpContext.Request.Cookies["cookie"]);
-        //}
-
-        //public async Task<IActionResult> SetSession()
-        //{
-        //    HttpContext.Session.SetString("session", "my first session");
-        //    return RedirectToAction(nameof (Index));
-        //}
-        //public async Task<IActionResult> GetSession()
-        //{
-        //    HttpContext.Session.GetString("session");
-        //    return Content(HttpContext.Session.GetString("session"));
-        //}
     }
-
 }

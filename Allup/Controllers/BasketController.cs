@@ -1,5 +1,5 @@
 ﻿using Allup.DAL;
-using Allup.Models;
+using Allup.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -19,30 +19,40 @@ namespace Allup.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
             return View();
         }
+
+
+
         public async Task<IActionResult> AddToBasket(int? id)
         {
-            if (id == null)
+            if (id==null)
             {
                 return BadRequest("id null ola bilmez");
             }
-            Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == id);
 
-            if (!await _context.Products.AnyAsync(p=>p.IsDeleted == false && p.Id ==id))
+            //Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted==false && p.Id==id);
+
+            if (!await _context.Products.AnyAsync(p => p.IsDeleted == false && p.Id == id))
             {
-                return NotFound("Id Yanlisdir");
+                return NotFound("id yalnisdir");
             }
 
+
+
             string basket = HttpContext.Request.Cookies["basket"];
+
+
             List<BasketVM> products = null;
-            if (!string.IsNullOrWhiteSpace(basket))
+
+            if ( !string.IsNullOrWhiteSpace(basket) )
             {
                 products = JsonConvert.DeserializeObject<List<BasketVM>>(basket);
                 BasketVM basketVM = products.Find(p => p.Id == id);
-                if (basketVM!=null)
+                if (basketVM != null)
                 {
                     basketVM.Count += 1;
                 }
@@ -50,79 +60,54 @@ namespace Allup.Controllers
                 {
                     basketVM = new BasketVM
                     {
-                        Id = (int)id,
-                        Count = 1
+                        Id=(int)id,
+                        Count =1
+
                     };
                     products.Add(basketVM);
                 }
             }
             else
             {
-               products = new List<BasketVM>();
+                products = new List<BasketVM>();
                 BasketVM basketVM = new BasketVM
                 {
                     Id = (int)id,
                     Count = 1
+
                 };
                 products.Add(basketVM);
-               
-               
             }
-                 basket = JsonConvert.SerializeObject(products);
-                HttpContext.Response.Cookies.Append("basket",basket);
-            foreach (BasketVM item in products)
-            {
-                product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == item.Id);
-                item.Title = product.Title;
-                item.Image = product.MainImage;
-                item.Price = product.DiscountedPrice > 0 ? product.DiscountedPrice : product.Price;
-                item.ExTax = product.ExTax;
-            }
-            return PartialView("_BasketCartPartial", products);
-        }
 
-        public async Task<IActionResult> DeleteFromBasket(int? id)
-        {
-            if (id == null)
-            {
-                return BadRequest();
 
-            }
-            Product product = await _context.Products.FirstOrDefaultAsync(p => p.IsDeleted == false && p.Id == id);
-           if(product ==null)
-            {
-                return NotFound();
-            }
-            string basket = HttpContext.Request.Cookies["basket"];
-            List<BasketVM> products = null;
-            if (!string.IsNullOrWhiteSpace(basket))
-            {
-                products = JsonConvert.DeserializeObject<List<BasketVM>>(basket);
-                BasketVM basketVM = products.Find(p=>p.Id==id);
-                if (basketVM != null)
-                {
-                    products.Remove(basketVM);
-                }
-                else
-                {
-                    return NotFound();
-                }
-            }
-           string basket1 = JsonConvert.SerializeObject(products);
-            HttpContext.Response.Cookies.Append("basket",basket1);
+
+
+            basket= JsonConvert.SerializeObject(products);
+            HttpContext.Response.Cookies.Append("basket", basket);
 
             foreach (BasketVM basketVM in products)
             {
-                Product product1 = await _context.Products.FirstOrDefaultAsync(p => p.Id == basketVM.Id);
-                basketVM.Image = product1.MainImage;
-                basketVM.Price = product1.DiscountedPrice > 0 ? product.DiscountedPrice : product.Price;
-                basketVM.ExTax = product1.ExTax;
-                basketVM.Title = product1.Title;
+                Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == basketVM.Id && p.IsDeleted == false);
+
+                basketVM.Title = product.Title;
+                basketVM.Image = product.MainImage;
+                basketVM.ExTax = product.ExTax;
+                basketVM.Price = product.DiscountedPrice > 0 ? product.DiscountedPrice : product.Price;
             }
 
-            return PartialView("_BasketCartPartial", products);
+
+            return PartialView("_BasketCardPArtial",products);
+        }
+
+
+
+        public async Task<IActionResult> GetFromBasket()
+        {
+           string pro =  HttpContext.Request.Cookies["basket"];
+            List<BasketVM> products =JsonConvert.DeserializeObject<List<BasketVM>>(pro);
+
+            return Json(products);
 
         }
-    
     }
 }

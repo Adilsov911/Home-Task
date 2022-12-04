@@ -8,9 +8,10 @@ namespace Allup.ViewComponents
 {
     public class FooterViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+
+        public async Task<IViewComponentResult> InvokeAsync(Dictionary<string,string> setting)
         {
-            return View();
+            return View(await Task.FromResult(setting));
         }
     }
 }
