@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mHwHfrNc97KXTX5jrmKHpZqarCm30CbYhbln4+6tUbi9uds2pvGWcrR+OCTiIh3hIZdOBNmsobM/itPOXKpX6w==",
+  "dgSpecHash": "xYVLr7PHPAqFYhSKZShcVHyy2CeinLQB/n1tHjrBtgN7I47q7qebEIzHZPh7sbvgp66hLyrUQgubB8Zj2DYtng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\Allup-master - Copy\\Allup\\Allup.csproj",
+  "projectFilePath": "C:\\Users\\adils\\OneDrive\\Рабочий стол\\AllupAdil\\Allup\\Allup.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adils\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\adils\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.31\\microsoft.aspnetcore.jsonpatch.3.1.31.nupkg.sha512",
@@ -165,8 +165,7 @@
     "C:\\Users\\adils\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\adils\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\adils\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\adils\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\adils\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512"
+    "C:\\Users\\adils\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
