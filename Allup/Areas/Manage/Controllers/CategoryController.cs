@@ -51,7 +51,7 @@ namespace Allup.Areas.Manage.Controllers
 
         public async Task<IActionResult> Create(Category category)
         {
-            //viewbag yuxarida create yazdigimizdi.bura yazdigki cunki burdan data yene getmelidi.
+           
             ViewBag.Categories = await _context.Categories.Where(c => c.IsDeleted == false && c.IsMain == true).ToListAsync();
             if (!ModelState.IsValid)
             {
@@ -210,7 +210,9 @@ namespace Allup.Areas.Manage.Controllers
                         ModelState.AddModelError("File", "Faylin olcusu maksimum 20 kb olmalidir");
                         return View(category);
                     }
-                    string path = @"C:\Users\ROG\Desktop\Allup\Allup\wwwroot\assets\images" + category.File.FileName;
+                    //string path = @"C:\Users\ROG\Desktop\Allup\Allup\wwwroot\assets\images";
+
+                    string path = Path.Combine(_env.WebRootPath, "assest", "images");
 
                     if (System.IO.File.Exists(path + existedCategory.Image))
                     {
@@ -265,68 +267,6 @@ namespace Allup.Areas.Manage.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return BadRequest("Id bos ola bilmez");
-            }
-
-            Category category = await _context.Categories.FirstOrDefaultAsync(c => c.IsDeleted == false && c.Id == id);
-
-            if (category == null)
-            {
-                return NotFound("Daxil edilen Id yalnisdir");
-            }
-
-            ViewBag.Categories = await _context.Categories.Where(c => c.IsDeleted == false && c.IsMain == true).ToListAsync();
-            return View(category);
-            
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int? id, Category category)
-        {
-
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-
-            ViewBag.Categories = await _context.Categories.Where(c => c.IsDeleted == false && c.IsMain == true).ToListAsync();
-
-            if (id == null)
-            {
-                return BadRequest("Id bos ola bilmez");
-            }
-
-            Category deletedCategory = await _context.Categories.FirstOrDefaultAsync(c => c.IsDeleted == false && c.Id == id);
-
-            if (deletedCategory == null)
-            {
-                return NotFound("Daxil edilen Id yalnisdir");
-            }
-
-
-            if (category.Id != id)
-            {
-                return BadRequest("Id bos ola bilmez");
-            }
-
-            
-           deletedCategory.IsDeleted = true;
-           deletedCategory.DeletedAt = DateTime.UtcNow.AddHours(4);
-           deletedCategory.DeletedBy = "System";
-
-            _context.Categories.Remove(deletedCategory);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("Index");
-        }
-
-
-        [HttpGet]
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null)
@@ -347,6 +287,29 @@ namespace Allup.Areas.Manage.Controllers
             return View(category);
         }
 
+
+        [HttpGet]
+        public async Task<IActionResult> Delete (int? id)
+        {
+            if (id == null)
+            {
+                return NotFound("id yanlisdir");
+
+            }
+            Category category = await _context.Categories
+                .Include(c => c.Products)
+                .Include(c => c.Children)
+                .FirstOrDefaultAsync(c => c.IsDeleted == false && c.Id == id);
+            if (category != null)
+            {
+                return NotFound("id yalnisdir");
+            }
+            if ((category.Products != null && category.Products.Count()>0) || (category.Children != null && category.Children.Count()>0))
+            {
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
+        }
 
         
 

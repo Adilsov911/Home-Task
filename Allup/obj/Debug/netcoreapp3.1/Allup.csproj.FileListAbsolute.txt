@@ -792,7 +792,6 @@ C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcor
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Brand\Index.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Brand\Update.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Category\Create.cshtml.g.cs
-C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Category\Delete.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Category\Index.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Category\Update.cshtml.g.cs
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Dashboard\Index.cshtml.g.cs
