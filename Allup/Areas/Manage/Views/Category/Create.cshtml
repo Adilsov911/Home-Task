@@ -1,58 +1,40 @@
 ﻿@model Category
-
 @{
     ViewData["Title"] = "Create";
     IEnumerable<Category> categories = ViewBag.Categories;
     SelectList selectListItems = new SelectList(categories, nameof(Category.Id), nameof(Category.Name));
 }
 
-
-<h1>Create Category</h1>
-
+<h1 class="h3 mb-4 text-gray-800">Create Brand</h1>
 <div class="row justify-content-center">
     <div class="col-lg-8">
-
         <form method="post" enctype="multipart/form-data">
-
             <div class="form-check">
-                <input asp-for="IsMain" class="form-check-input">
-                <label asp-for="IsMain" class="form-check-label"></label>
+                <input asp-for="IsMain" type="checkbox" class="form-check-input">
+                <label asp-for="IsMain" class="form-check-label">Check me out</label>
             </div>
 
             <div class="form-group">
                 <label asp-for="Name">Name</label>
-                <input asp-for="Name" class="form-control" required placeholder="Enter Name">
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <input asp-for="Name" class="form-control" placeholder="Name">
+                <span asp-validation-for="Name" class="text text-danger"></span>
             </div>
-
-
-            <div id="MainImage" class="form-group">
-                <label asp-for="File">Image</label>
-                
-                <input asp-for="File" accept="image/jpg" class="form-control">
-                <span asp-validation-for="File" class="text-danger"></span>
+            <div id="mainImg" class="form-group">
+                <label asp-for="File"></label>
+                <input asp-for="File" multiple accept="image/png" class="form-control">
+                <span asp-validation-for="File" class="text text-danger"></span>
 
             </div>
-
-            <div id="ParentList" class="form-group">
-                <label>Parent select</label>
+            <div id="parentList" class="form-group">
+                <label>Parent</label>
                 <select asp-for="ParentId" class="form-control" asp-items="selectListItems">
-
-
-                    @*@foreach (Category category in categories)
-                        {
-                            <option value="@category.Id">@category.Name</option>
-                        }*@
-
                 </select>
             </div>
+
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
     </div>
 </div>
-
-
-@section script{
-    @await Html.PartialAsync("_ValidationPartial")
+@section script{ 
+   @await Html.PartialAsync("_ValidationPartial");
 }
-

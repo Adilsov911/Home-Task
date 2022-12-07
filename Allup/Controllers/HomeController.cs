@@ -1,8 +1,9 @@
 ﻿using Allup.DAL;
-using Allup.Model;
-using Allup.ViewModels.Home;
+using Allup.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,25 +18,14 @@ namespace Allup.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult>Index()
+        public async Task<IActionResult> Index()
         {
-            //List<Setting> settings = _context.Settings.ToList();
-            //ViewBag.Settings = settings;
+          return View();
 
-            //List<Slider> sliders =await _context.Sliders.Where(s => s.IsDeleted == false).ToListAsync();
-            //List<Category> categories = await _context.Categories.Where(c => c.IsDeleted == false && c.IsMain == true).ToListAsync();
-            
-
-            HomeVM homeVM = new HomeVM
-            {
-                Sliders = await _context.Sliders.Where(s => s.IsDeleted == false).ToListAsync(),
-                Categories = await _context.Categories.Where(c => c.IsDeleted == false && c.IsMain == true).ToListAsync(),
-                 NewArrival = await _context.Products.Where(p => p.IsDeleted == false && p.IsNewArrival == true).ToListAsync(),
-                 BestSeller = await _context.Products.Where(p => p.IsDeleted == false && p.IsBestSeller == true).ToListAsync(),
-                 Featured = await _context.Products.Where(p => p.IsDeleted == false && p.IsFeatured == true).ToListAsync()
-            };
-
-            return View(homeVM);
         }
+
+
+     
     }
+
 }

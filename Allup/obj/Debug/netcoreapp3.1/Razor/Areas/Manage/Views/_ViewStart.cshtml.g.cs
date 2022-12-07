@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 2 "C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\Areas\Manage\Views\_ViewImports.cshtml"
-using Allup.Model;
+using Allup.Models;
 
 #line default
 #line hidden
@@ -35,34 +35,41 @@ using Allup.Interfaces;
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\Areas\Manage\Views\_ViewImports.cshtml"
-using Allup.ViewModels.Home;
+using Allup.ViewModels.ShopVM;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 6 "C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\Areas\Manage\Views\_ViewImports.cshtml"
-using Allup.ViewModels.Shop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 7 "C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\Areas\Manage\Views\_ViewImports.cshtml"
 using Allup.ViewModels.Basket;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\Areas\Manage\Views\_ViewImports.cshtml"
+#line 7 "C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\Areas\Manage\Views\_ViewImports.cshtml"
 using Allup.ComponentViewModels.Header;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 8 "C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\Areas\Manage\Views\_ViewImports.cshtml"
+using Allup.ComponentViewModels.ProductVM;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 9 "C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\Areas\Manage\Views\_ViewImports.cshtml"
+using Allup.ViewComponents;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f400a24e4f1c1f8dbc87c0f761266a45e781e06b", @"/Areas/Manage/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"232caa115a8025d046c0021bf6d2a4aa2dd1ee7e", @"/Areas/Manage/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1471b0262b4a1ab7ed622a38ea42a7d95717e32a", @"/Areas/Manage/Views/_ViewImports.cshtml")]
     public class Areas_Manage_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

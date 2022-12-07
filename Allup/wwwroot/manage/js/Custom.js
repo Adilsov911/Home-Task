@@ -1,36 +1,29 @@
 ﻿$(document).ready(function () {
 
-
     let isMain = $("#IsMain").is(":checked");
-
-
     if (isMain) {
+        $("#parentList").addClass("d-none")
+        $("#mainImg").removeClass("d-none")
 
-        $("#ParentList").addClass("d-none");
-        $("#MainImage").removeClass("d-none");
+
     }
     else {
-        $("#ParentList").removeClass("d-none");
-        $("#MainImage").addClass("d-none");
-
+        $("#mainImg").addClass("d-none")
+        $("#parentList").removeClass("d-none")
     }
 
-    $("#IsMain").click(function () {
+    $("#IsMain").click(function() {
         let isMain = $(this).is(":checked");
 
-
         if (isMain) {
+            $("#parentList").addClass("d-none")
+            $("#mainImg").removeClass("d-none")
 
-            $("#ParentList").addClass("d-none");
-            $("#MainImage").removeClass("d-none");
+
         }
         else {
-            $("#ParentList").removeClass("d-none");
-            $("#MainImage").addClass("d-none");
-
-            }
-
+            $("#mainImg").addClass("d-none")
+            $("#parentList").removeClass("d-none")
+        }
     })
-
-
 })

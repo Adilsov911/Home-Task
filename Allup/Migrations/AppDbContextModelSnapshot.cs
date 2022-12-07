@@ -19,7 +19,7 @@ namespace Allup.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Allup.Model.Brand", b =>
+            modelBuilder.Entity("Allup.Models.Brand", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,7 +56,7 @@ namespace Allup.Migrations
                     b.ToTable("Brands");
                 });
 
-            modelBuilder.Entity("Allup.Model.Category", b =>
+            modelBuilder.Entity("Allup.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -106,14 +106,14 @@ namespace Allup.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Allup.Model.Product", b =>
+            modelBuilder.Entity("Allup.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BrandId")
+                    b.Property<int?>("BrandId")
                         .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
@@ -167,16 +167,16 @@ namespace Allup.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasMaxLength(255);
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("money");
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<string>("Seria")
                         .HasColumnType("nvarchar(4)")
                         .HasMaxLength(4);
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -193,7 +193,7 @@ namespace Allup.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Allup.Model.ProductImage", b =>
+            modelBuilder.Entity("Allup.Models.ProductImage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -216,8 +216,7 @@ namespace Allup.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -235,7 +234,7 @@ namespace Allup.Migrations
                     b.ToTable("ProductImages");
                 });
 
-            modelBuilder.Entity("Allup.Model.ProductTag", b =>
+            modelBuilder.Entity("Allup.Models.ProductTag", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -278,7 +277,7 @@ namespace Allup.Migrations
                     b.ToTable("ProductTags");
                 });
 
-            modelBuilder.Entity("Allup.Model.Setting", b =>
+            modelBuilder.Entity("Allup.Models.Setting", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -286,19 +285,19 @@ namespace Allup.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Key")
-                        .HasColumnType("nvarchar(2500)")
-                        .HasMaxLength(2500);
+                        .HasColumnType("nvarchar(2550)")
+                        .HasMaxLength(2550);
 
                     b.Property<string>("Value")
-                        .HasColumnType("nvarchar(2500)")
-                        .HasMaxLength(2500);
+                        .HasColumnType("nvarchar(2550)")
+                        .HasMaxLength(2550);
 
                     b.HasKey("Id");
 
                     b.ToTable("Settings");
                 });
 
-            modelBuilder.Entity("Allup.Model.Slider", b =>
+            modelBuilder.Entity("Allup.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -322,23 +321,24 @@ namespace Allup.Migrations
                         .HasMaxLength(2000);
 
                     b.Property<string>("Image")
-                        .HasColumnType("nvarchar(1000)")
-                        .HasMaxLength(1000);
+                        .HasColumnType("nvarchar(800)")
+                        .HasMaxLength(800);
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("MainTitle")
-                        .HasColumnType("nvarchar(1000)")
-                        .HasMaxLength(1000);
+                        .IsRequired()
+                        .HasColumnType("nvarchar(800)")
+                        .HasMaxLength(800);
 
                     b.Property<string>("PageLink")
-                        .HasColumnType("nvarchar(1000)")
-                        .HasMaxLength(1000);
+                        .HasColumnType("nvarchar(800)")
+                        .HasMaxLength(800);
 
-                    b.Property<string>("SubTitle")
-                        .HasColumnType("nvarchar(1000)")
-                        .HasMaxLength(1000);
+                    b.Property<string>("Subtitle")
+                        .HasColumnType("nvarchar(800)")
+                        .HasMaxLength(800);
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -351,7 +351,7 @@ namespace Allup.Migrations
                     b.ToTable("Sliders");
                 });
 
-            modelBuilder.Entity("Allup.Model.Tag", b =>
+            modelBuilder.Entity("Allup.Models.Tag", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -388,46 +388,44 @@ namespace Allup.Migrations
                     b.ToTable("Tags");
                 });
 
-            modelBuilder.Entity("Allup.Model.Category", b =>
+            modelBuilder.Entity("Allup.Models.Category", b =>
                 {
-                    b.HasOne("Allup.Model.Category", "Parent")
+                    b.HasOne("Allup.Models.Category", "Parent")
                         .WithMany("Children")
                         .HasForeignKey("ParentId");
                 });
 
-            modelBuilder.Entity("Allup.Model.Product", b =>
+            modelBuilder.Entity("Allup.Models.Product", b =>
                 {
-                    b.HasOne("Allup.Model.Brand", "Brand")
+                    b.HasOne("Allup.Models.Brand", "Brand")
                         .WithMany("Products")
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BrandId");
 
-                    b.HasOne("Allup.Model.Category", "Category")
-                        .WithMany()
+                    b.HasOne("Allup.Models.Category", "Category")
+                        .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Allup.Model.ProductImage", b =>
+            modelBuilder.Entity("Allup.Models.ProductImage", b =>
                 {
-                    b.HasOne("Allup.Model.Product", "Product")
+                    b.HasOne("Allup.Models.Product", "Product")
                         .WithMany("ProductImages")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Allup.Model.ProductTag", b =>
+            modelBuilder.Entity("Allup.Models.ProductTag", b =>
                 {
-                    b.HasOne("Allup.Model.Product", "Product")
+                    b.HasOne("Allup.Models.Product", "Product")
                         .WithMany("ProductTags")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Allup.Model.Tag", "Tag")
+                    b.HasOne("Allup.Models.Tag", "Tag")
                         .WithMany("ProductTags")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)

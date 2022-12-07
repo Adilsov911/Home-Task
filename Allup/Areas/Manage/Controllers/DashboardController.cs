@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace Allup.Areas.Manage.Controllers
 {
     [Area("manage")]
-    public class DashboardController : Controller
+    public class DashBoardController : Controller
     {
+        
         public IActionResult Index()
         {
             return View();
