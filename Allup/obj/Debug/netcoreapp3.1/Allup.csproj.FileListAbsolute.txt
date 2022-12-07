@@ -648,3 +648,8 @@ C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcor
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Allup.dll
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Allup.pdb
 C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\obj\Debug\netcoreapp3.1\Allup.genruntimeconfig.cache
+C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\adils\OneDrive\Рабочий стол\AllupAdil\Allup\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
