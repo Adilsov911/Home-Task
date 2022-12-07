@@ -128,6 +128,23 @@ namespace Allup.Areas.Manage.Controllers
                 .ToListAsync();
             return View(category);
         }
+        public async Task<IActionResult> ShowDetail(int? id)
+        {
+            if (id == null)
+            {
+                return BadRequest("id can not be null");
+            }
+            Category category = await _context.Categories
+                .Include(c => c.Products)
+                .Include(c => c.Children)
+                .FirstOrDefaultAsync(C => C.IsDeleted == false && C.IsMain && C.Id == id);
+            if (category == null)
+            {
+                return NotFound("can not find category with this id");
+            }
+
+            return View(category);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(int? id, Category category)
@@ -240,22 +257,6 @@ namespace Allup.Areas.Manage.Controllers
 
         }
 
-        public async Task<IActionResult> ShowDetail(int? id)
-        {
-            if (id == null)
-            {
-                return BadRequest("id can not be null");
-            }
-            Category category = await _context.Categories
-                .Include(c=>c.Products)
-                .Include(c=>c.Children)
-                .FirstOrDefaultAsync(C => C.IsDeleted == false && C.IsMain && C.Id == id);
-            if (category == null)
-            {
-                return NotFound("can not find category with this id");
-            }
-          
-            return View(category);
-        }
+       
     }
 }
